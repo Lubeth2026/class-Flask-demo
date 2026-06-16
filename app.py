@@ -5,6 +5,7 @@ from pokemon_data import pokemon_response
 
 # If you run app.py directly __name__ == __main__ (ONLY in this scenario type)
 app = Flask(__name__)
+CORS(app)
 
 # DICTIONARY
 banana = {
@@ -26,6 +27,6 @@ def get_key():
 
 # Lewis Created his own Pokemon API
 null = None 
-@app.rpute("/pokemon")
+@app.route("/pokemon")
 def get_pokemon():
     return pokemon_response
